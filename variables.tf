@@ -14,8 +14,9 @@ variable "apicurl" {
 }
 
 variable "tenants" {
- default = {
+ description = "Tenants in environment"
  type = map(string)
+ default = {
  "tenant1" = {
     "name" = "briamorr_tenant1"
     "description" = "Tenant1"

@@ -1,6 +1,7 @@
-resource "aci_tenant" "example" {
-  name        = "demo_tenant"
-  description = "from terraform"
-  annotation  = "tag"
-  name_alias  = "tenant"
+resource "aci_tenant" "tenants" {
+  for_each    = var.tenants
+  name        = each.value.name
+  description = each.value.description
+  annotation  = each.value.annotation
+  name_alias  = each.value.name_alias
 }

@@ -25,7 +25,7 @@ variable "tenants" {
 
  "tenant2" = {
       "name" = "briamorr_tenant2"
-      "desription" = "Tenant 2"
+      "description" = "Tenant 2"
       "annotation" = "tag"
       "name_alias" = "tenant2"
     }

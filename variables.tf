@@ -13,3 +13,8 @@ variable "apicurl" {
   type        = string
 }
 
+variable "tenants" {
+  description = "ACI Tenants"
+  type = list(string)
+  default = ["briamorr_tenant1,briamorr_tenant2,briamorr_tenant3"]
+}

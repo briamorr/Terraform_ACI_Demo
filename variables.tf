@@ -14,7 +14,20 @@ variable "apicurl" {
 }
 
 variable "tenants" {
-  description = "ACI Tenants"
-  type = list(string)
-  default = ["briamorr_tenant1,briamorr_tenant2,briamorr_tenant3"]
+ default = {
+ type = map(string)
+ "tenant1" = {
+    "name" = "briamorr_tenant1"
+    "description" = "Tenant1"
+    "annotation" = "tag"
+    "name_alias" = "tenant1"
+ }
+
+ "tenant2" = {
+      "name" = "briamorr_tenant2"
+      "desription" = "Tenant 2"
+      "annotation" = "tag"
+      "name_alias" = "tenant2"
+    }
+  }
 }

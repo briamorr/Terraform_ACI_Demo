@@ -1,7 +1,7 @@
 resource "aci_application_epg" "test_epg" {
     count = 5
     application_profile_dn  = aci_application_profile.test_ap.*.id[count.index]
-    name                              = "demo_epg ${count.index}"
+    name                              = "epg_${count.index}"
     description                   = "from terraform"
     annotation                    = "tag_epg"
     exception_tag                 = "0"
